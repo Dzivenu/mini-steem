@@ -15,7 +15,6 @@ export default class SteemTrending extends Component {
 
   componentWillMount() {
     steem.api.getDiscussionsByTrending({ limit: 10 }, (err, res) => {
-      console.log(res);
       this.setState((prevState) => {
         prevState.discussions = res;
         prevState.loading = false;
