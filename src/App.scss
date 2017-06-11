@@ -1,0 +1,23 @@
+$raleway: 'Raleway', sans-serif;
+
+body {
+  font-family: $raleway;
+  font-size: 14px;
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.top, a, .fa {
+  color: #1eaedb;
+}
+
+.bottom {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding: 12px 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

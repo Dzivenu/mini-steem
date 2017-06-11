@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "format-currency": "^1.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "steem": "^0.5.14"
   },
   "devDependencies": {
+    "enzyme": "^2.8.2",
+    "expect": "^1.20.2",
     "node-sass-chokidar": "0.0.2",
     "npm-run-all": "^4.0.2",
-    "react-scripts": "1.0.7"
+    "react-dom": "^15.5.4",
+    "react-scripts": "1.0.7",
+    "react-test-renderer": "^15.5.4",
+    "sinon": "^2.3.4"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/ --output-style compressed",

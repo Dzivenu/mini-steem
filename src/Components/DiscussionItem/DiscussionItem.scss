@@ -1,0 +1,32 @@
+.discussion-item {
+  padding: 15px 0;
+
+  .title {
+    text-transform: capitalize;
+  }
+
+  .metadata {
+    .fa {
+      padding-right: 5px; 
+    }
+
+    span {
+      border-right: 1px solid darken(#eee, 10%);
+      padding: 0 10px;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+
+    .category {
+      a {
+        padding-left: 5px;
+      }
+    }
+  }
+}
