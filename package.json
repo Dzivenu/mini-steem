@@ -8,7 +8,7 @@
     "react-dom": "^15.5.4",
     "remove-markdown": "^0.1.0",
     "steem": "^0.5.14",
-    "striptags": "^3.0.1"
+    "striptags": "2.2.1"
   },
   "devDependencies": {
     "enzyme": "^2.8.2",
