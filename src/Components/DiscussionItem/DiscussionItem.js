@@ -1,14 +1,16 @@
 import React from 'react';
 import formatCurrency from 'format-currency';
+import striptags from 'striptags';
 import removeMd from 'remove-markdown';
 
 import './DiscussionItem.css';
 
 export const formatStr = (str) => (
   str
-    .replace(/<\/\w+>|<\w+(\s[\w="'#:/.]+)*>/gi, '')
-    .trim()
-    .substr(0, 120) + '...'
+    .replace(/<\/\w+>|<\w+(\s[\w="'#:/.-]+)*>|[-#*]+/gi, '')
+    .replace(/https?:\/\/([\w\d-]+\.)?[\w\d-]+\.[\w\d-]+(\/[\w\d-]+)*(\.[\w\d-]+)?/gi, '')
+    .substr(0, 120)
+    .trim() + '...'
 );
 
 const DiscussionItem = ({ discussion }) => {
@@ -25,7 +27,7 @@ const DiscussionItem = ({ discussion }) => {
 
       <div className="summary">
         <p>
-          { removeMd(formatStr(discussion.body)) }
+          { removeMd(formatStr(striptags(discussion.body))) }
         </p>
       </div>
 

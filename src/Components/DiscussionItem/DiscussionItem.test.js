@@ -8,7 +8,7 @@ import { formatStr } from './'
 
 const discussionItem = () => {
   let props = {
-                body: '<h1>the rise of bitcoin</h1>',
+                body: '<h1>the rise of bitcoin</h1> ## markdown content',
                 title: 'bitcoin will rise',
                 url: '/bitcoin-alt',
                 pending_payout_value: '1200',
@@ -24,7 +24,7 @@ const discussionItem = () => {
 let app = discussionItem();
 
 test('It renders the body property correctly', () => {
-  expect(app.find('.summary p').text()).toEqual('the rise of bitcoin...');
+  expect(app.find('.summary p').text()).toEqual('the rise of bitcoin  markdown content...');
 });
 
 test('It renders the title property correctly', () => {
@@ -59,10 +59,9 @@ test('It links the category to the right address', () => {
   expect(app.find('.category a').prop('href')).toEqual('http://steemit.com/trending/life');
 });
 
+test('formatStr function removes url in a string and truncates the string', () => {
+  let str = "picture is here http://steemit.com/pix.jpg";
 
-test('formatStr function strips html tags away from strings and truncates the string', () => {
-  let str = "<p>hello world</p><a href='#bar'> link</a><h3> lorem</h3>";
-
-  expect(formatStr(str)).toEqual('hello world link lorem...');
+  expect(formatStr(str)).toEqual('picture is here...');
 });
 
