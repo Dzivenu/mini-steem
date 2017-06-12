@@ -12,7 +12,6 @@ const App = () => {
 
         <div className="bottom">
           trending
-          {/* <span role="img" aria-label="fire">🔥</span> */}
         </div>
       </nav>
 
