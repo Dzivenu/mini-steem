@@ -15,7 +15,7 @@ const App = () => {
         </div>
       </nav>
 
-      <section className="Trending-Discussions">
+      <section className="trending-discussions">
         <SteemTrending />
       </section>
     </div>
